@@ -35,8 +35,6 @@ COPY package.json .
 RUN npm install \
   && npm cache clean --force
 
-WORKDIR .
-
 COPY . .
 
 CMD ["tini","--","node","./bin/www"]
